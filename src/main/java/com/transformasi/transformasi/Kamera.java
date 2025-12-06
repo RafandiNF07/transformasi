@@ -19,8 +19,8 @@ public class Kamera {
     public Kamera(Camera camera) {
         this.kamera = camera;
         camera.getTransforms().addAll(
-                rotateX,
                 rotateY,
+                rotateX,
                 cameraPosition
         );
     }

@@ -13,10 +13,7 @@ import javafx.scene.transform.Affine;
 
 public class TigaDimensi {
 
-    // Objek 3D yang akan dimanipulasi
-    private Box objekBox;
     private TransformasiModel model;
-    private TransformasiController controller;
     private Affine affineTransform;
 
     public Parent tampilkan() {
@@ -28,7 +25,8 @@ public class TigaDimensi {
         affineTransform = new Affine();
 
         // 2. Buat Objek Box (Kuning)
-        objekBox = new Box(100, 50, 70);
+        // Objek 3D yang akan dimanipulasi
+        Box objekBox = new Box(100, 50, 70);
         objekBox.setMaterial(new PhongMaterial(Color.YELLOW));
         objekBox.getTransforms().add(affineTransform); // Bind transformasi ke box
 
@@ -50,7 +48,7 @@ public class TigaDimensi {
         cameraControl.attachControl(subScene);
 
         // 6. Setup Controller (Sidebar)
-        controller = new TransformasiController(model);
+        TransformasiController controller = new TransformasiController(model);
 
         // Callback: Apa yang terjadi saat slider digeser? Update Affine!
         Runnable updateAction = () -> {
