@@ -11,7 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
-public class Duadimensi {
+public class DuaDimensi {
 
     // Variabel transformasi
     private double transX = 0;
