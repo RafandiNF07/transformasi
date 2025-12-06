@@ -6,7 +6,6 @@ import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
 
 public class Kamera {
-    private final Camera kamera;
     private double anchorX, anchorY;
     private double anchorAngleX = 0;
     private double anchorAngleY = 0;
@@ -17,7 +16,6 @@ public class Kamera {
     private final Translate cameraPosition = new Translate(0, -50, -1000);
 
     public Kamera(Camera camera) {
-        this.kamera = camera;
         camera.getTransforms().addAll(
                 rotateY,
                 rotateX,

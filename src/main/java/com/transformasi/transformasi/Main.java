@@ -1,32 +1,3 @@
-//package com.transformasi.transformasi;
-//
-//import javafx.application.Application;
-//import javafx.scene.Scene;
-//import javafx.scene.control.Tab;
-//import javafx.scene.control.TabPane;
-//import javafx.stage.Stage;
-//
-//public class Main extends Application {
-//    @Override
-//    public void start(Stage stage) {
-//        TabPane tabs = new TabPane();
-//
-//        Tab tab2D = new Tab("2 Dimensi", new Duadimensi().tampilkan());
-//        Tab tab3D = new Tab("3 Dimensi", new TigaDimensi().tampilkan());
-//
-//        tab2D.setClosable(false);
-//        tab3D.setClosable(false);
-//
-//        tabs.getTabs().addAll(tab2D, tab3D);
-//
-//        stage.setScene(new Scene(tabs, 1200, 800));
-//        stage.setTitle("Transformasi Linear 2D & 3D");
-//        stage.show();
-//    }
-//    public static void main(String[] args) {
-//        launch(args);
-//    }
-//}
 package com.transformasi.transformasi;
 
 import javafx.application.Application;
@@ -63,20 +34,7 @@ public class Main extends Application {
         tabs.getTabs().addAll(tab2D, tab3D);
 
         // 2. MEMBUAT TOMBOL KELUAR (Solusi Masalah Teman Anda)
-        Button btnExit = new Button("KELUAR APLIKASI");
-        btnExit.setStyle("-fx-background-color: #d32f2f; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20;");
-
-        // Aksi saat tombol ditekan: Matikan JavaFX Thread
-        btnExit.setOnAction(e -> {
-            Platform.exit(); // Cara menutup aplikasi JavaFX yang benar
-            System.exit(0);  // Memastikan semua thread background mati total
-        });
-
-        // Masukkan tombol ke dalam HBox agar posisinya di tengah bawah
-        HBox bottomBar = new HBox(btnExit);
-        bottomBar.setAlignment(Pos.CENTER);
-        bottomBar.setPadding(new Insets(10));
-        bottomBar.setStyle("-fx-background-color: #333;"); // Warna footer gelap
+        HBox bottomBar = getHBox();
 
         // 3. Setup Layout Utama (BorderPane)
         // Kita bungkus TabPane dan Tombol Exit dalam satu layout
@@ -97,5 +55,23 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("Transformasi Linear - Teknik Informatika");
         stage.show();
+    }
+
+    private static HBox getHBox() {
+        Button btnExit = new Button("KELUAR APLIKASI");
+        btnExit.setStyle("-fx-background-color: #d32f2f; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20;");
+
+        // Aksi saat tombol ditekan: Matikan JavaFX Thread
+        btnExit.setOnAction(e -> {
+            Platform.exit(); // Cara menutup aplikasi JavaFX yang benar
+            System.exit(0);  // Memastikan semua thread background mati total
+        });
+
+        // Masukkan tombol ke dalam HBox agar posisinya di tengah bawah
+        HBox bottomBar = new HBox(btnExit);
+        bottomBar.setAlignment(Pos.CENTER);
+        bottomBar.setPadding(new Insets(10));
+        bottomBar.setStyle("-fx-background-color: #333;"); // Warna footer gelap
+        return bottomBar;
     }
 }
