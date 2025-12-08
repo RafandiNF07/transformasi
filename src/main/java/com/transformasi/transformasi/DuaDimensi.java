@@ -274,8 +274,8 @@ public class DuaDimensi {
                 Refleksi X = %b Refleksi Y = %b\s
                 Proyeksi X = %b Proyeksi Y = %b
                \s""",
-                mxx, mxy, tx,
-                myx, myy, ty,
+                mxx, -mxy, tx,
+                -myx, myy, ty,
                 xPrime, yPrime,
                 shearX, shearY,
                 reflectX, reflectY,
