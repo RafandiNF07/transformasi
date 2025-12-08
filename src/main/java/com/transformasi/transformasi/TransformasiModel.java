@@ -52,7 +52,7 @@ public class TransformasiModel {
         );
         a.append(shear);
 
-        a.append(new Translate(tx, -ty, tz));
+        a.append(new Translate(tx, -ty, -tz));
 
 
         return a;

@@ -65,8 +65,8 @@ public class TigaDimensi {
                             "[ %5.2f %5.2f %5.2f %5.2f ]\n" +
                             "[ 0.00  0.00  0.00  1.00 ]",
                     baru.getMxx(), baru.getMxy(), baru.getMxz(), baru.getTx(),
-                    baru.getMyx(), baru.getMyy(), baru.getMyz(), baru.getTy(),
-                    baru.getMzx(), baru.getMzy(), baru.getMzz(), baru.getTz()
+                    baru.getMyx(), baru.getMyy(), baru.getMyz(), -baru.getTy(),
+                    baru.getMzx(), baru.getMzy(), baru.getMzz(), -baru.getTz()
             );
             controller.getMatrixLabel().setText(matrixStr);
         };
