@@ -46,9 +46,9 @@ public class TransformasiModel {
 
         // Shear (manual matrix)
         Affine shear = new Affine(
-                1, shXY, shXZ, 0,
-                shYX, 1, shYZ, 0,
-                shZX, shZY, 1, 0
+                1, -shXY, -shXZ, 0,
+                -shYX, 1, -shYZ, 0,
+                -shZX, -shZY, 1, 0
         );
         a.append(shear);
 

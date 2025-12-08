@@ -246,7 +246,7 @@ public class DuaDimensi {
         if (projY) affine.append(new Affine(0,0,0, 0,1,0)); // proyeksi ke Y
         affine.appendRotation(-rotateDegree);
         affine.appendScale(scaleValue, scaleValue);
-        affine.appendShear(shearX, shearY);
+        affine.appendShear(-shearX, -shearY);
         affine.appendTranslation(transX, -transY);
 
         // Hitung posisi bayangan dengan affine langsung
@@ -298,7 +298,7 @@ public class DuaDimensi {
         if (projY) g2.transform(new Affine(0,0,0, 0,1,0));
         g2.rotate(-rotateDegree);
         g2.scale(scaleValue, scaleValue);
-        g2.transform(new Affine(1, shearX, 0, shearY, 1, 0));
+        g2.transform(new Affine(1, -shearX, 0, -shearY, 1, 0));
         g2.translate(transX, -transY);
 
 

@@ -44,7 +44,7 @@ public class Main extends Application {
 
         // 4. Setup Scene & Stage
         // Pastikan TIDAK ADA baris: stage.initStyle(StageStyle.UNDECORATED);
-        Scene scene = new Scene(root, 1280, 850);
+        Scene scene = new Scene(root, 1280, 700);
 
         // Listener tambahan: Pastikan aplikasi mati total saat tombol X window ditekan
         stage.setOnCloseRequest(e -> {
